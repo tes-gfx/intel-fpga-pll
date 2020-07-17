@@ -1,7 +1,7 @@
-obj-m := altr_pll.o
-altr_pll-y := altera_pll.o \
+obj-m := intel_pll.o
+altr_pll-y := intel_pll.o \
 
-ccflags-y := -DDEBUG -g -Og
+#ccflags-y := -DDEBUG -g -Og
 
 SRC := $(shell pwd)
 

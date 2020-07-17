@@ -7,7 +7,7 @@
 #include <linux/clk-provider.h>
 #include <linux/of_address.h>
 
-#include "altera_pll.h"
+#include "intel_pll.h"
 
 
 /* Register defines */
@@ -348,7 +348,7 @@ static int altera_pll_probe(struct platform_device *pdev)
 }
 
 static const struct platform_device_id altera_pll_id_table[] = {
-	{ "altera_pll", 0 },
+	{ "intel_pll", 0 },
 	{ }
 };
 MODULE_DEVICE_TABLE(platform, altera_pll_id_table);
@@ -363,7 +363,7 @@ MODULE_DEVICE_TABLE(of, altera_pll_of_table);
 static struct platform_driver altera_pll_driver = {
 	.probe = altera_pll_probe,
 	.driver         = {
-	        .name   = "altera_pll",
+	        .name   = "intel_pll",
 	        .of_match_table = altera_pll_of_table,
 	},
 	.id_table = altera_pll_id_table,
